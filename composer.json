@@ -1,0 +1,36 @@
+{
+    "name": "chep6915/isocial",
+    "license": "MIT",
+    "autoload-dev": {
+        "psr-4": {
+            "Chep6915\\ISocial\\Tests\\": "tests/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Chep6915\\ISocial\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rex",
+            "email": "chep6915@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^8.13"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chep6915\\ISocial\\ISocialServiceProvider",
+                "Chep6915\\ISocial\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "ISocial": "Chep6915\\ISocial\\Facades\\ISocial"
+            }
+        }
+    }
+}
