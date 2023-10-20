@@ -11,6 +11,6 @@ class htt
 
     public function response()
     {
-        return 55;
+        return "XXXXXXX";
     }
 }

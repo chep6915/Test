@@ -14,7 +14,6 @@ class HelloController extends Controller
 
     public function view()
     {
-        return view('i_social::home');
-//        return view('i_social::home', ['message' => ISocial::response()]);
+        return view('i_social::home', ['message' => ISocial::response()]);
     }
 }

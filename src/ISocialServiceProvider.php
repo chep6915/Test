@@ -11,9 +11,7 @@ class ISocialServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind('ISocial', function ($app) {
-            return new htt;
-        });
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'i_social');
     }
 
     /**
@@ -21,7 +19,10 @@ class ISocialServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__.'../../routes/web.php');
-        $this->loadViewsFrom(__DIR__.'../../resources/views/', 'i_social');
+        $this->loadRoutesFrom(__DIR__ . '../../routes/web.php');
+
+        $this->app->bind('ISocial', function ($app) {
+            return new htt;
+        });
     }
 }
